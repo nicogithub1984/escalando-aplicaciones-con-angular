@@ -4,16 +4,17 @@ import { LoginModule } from './modules/login';
 
 import { PageNotFoundComponent } from './modules/core';
 import { LoginComponent, AuthGuard } from './modules/login';
+import { registerContentQuery } from '@angular/core/src/render3';
 
 const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
   },
-  {
-    path: 'register',
-    loadChildren: './pages/register/register.module#RegisterModule'
-  },
+{
+  path: 'register',
+  loadChildren: './pages/register/register.module#RegisterModule'
+},
   {
     path: '',
     loadChildren: './pages/home/home.module#HomeModule',
